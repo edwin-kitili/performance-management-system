@@ -1,0 +1,55 @@
+
+
+<div class="dashboard">
+  <div class="summary-cards">
+    <div class="card">Employees <span>{{ employees }}</span></div>
+    <div class="card">Average Employee Age <span>{{ averageAge }} y.o.</span></div>
+    <div class="card">Average Employee Tenure <span>{{ averageTenure }} years</span></div>
+    <div class="card">Gender Diversity Ratio <span>{{ genderDiversityRatio }}%</span></div>
+  </div>
+
+  <div class="charts">
+    <div class="chart">
+      <h3>Employee count by rating</h3>
+      <canvas baseChart
+              [datasets]="[{ data: processedEmployeeRatings, label: 'Employees' }]"
+              [labels]="getEmployeeRatingsLabels()"
+              chartType="bar">
+      </canvas>
+    </div>
+    <div class="chart">
+      <h3>Employees by status</h3>
+      <canvas baseChart
+              [datasets]="[{ data: processedEmployeeStatus, backgroundColor: getEmployeeStatusColors() }]"
+              [labels]="getEmployeeStatusLabels()"
+              chartType="pie">
+      </canvas>
+    </div>
+  </div>
+
+  <div class="employee-scores">
+    <h3>Average score per employee</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Organization</th>
+          <th>KPI Label</th>
+          <th>KPI Value</th>
+          <th>Average Score</th>
+          <th>Curriculum Progress</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let score of employeeScores">
+          <td>{{ score.name }}</td>
+          <td>{{ score.organization }}</td>
+          <td>{{ score.kpiLabel }}</td>
+          <td>{{ score.kpiValue }}%</td>
+          <td>{{ score.averageScore }}</td>
+          <td>{{ score.curriculumProgress }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

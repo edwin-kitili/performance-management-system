@@ -1,0 +1,56 @@
+<form [formGroup]="kpiForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="kpiName">KPI Name</label>
+      <input id="kpiName" formControlName="kpiName" type="text">
+    </div>
+  
+    <div>
+      <label for="description">Description</label>
+      <textarea id="description" formControlName="description"></textarea>
+    </div>
+  
+    <div>
+      <label for="unitOfMeasure">Unit of Measure</label>
+      <select id="unitOfMeasure" formControlName="unitOfMeasure">
+        <option value="Number">Number</option>
+        <option value="Percentage">Percentage</option>
+        <!-- Add more options as needed -->
+      </select>
+    </div>
+  
+    <div>
+      <label for="aggregation">Aggregation</label>
+      <select id="aggregation" formControlName="aggregation">
+        <option value="Summative">Summative</option>
+        <option value="Average">Average</option>
+        <!-- Add more options as needed -->
+      </select>
+    </div>
+  
+    <div>
+      <label for="targetType">Target Type</label>
+      <select id="targetType" formControlName="targetType">
+        <option *ngFor="let type of targetTypes" [value]="type">{{ type }}</option>
+      </select>
+    </div>
+  
+    <div>
+      <label for="target">Target</label>
+      <select id="target" formControlName="target">
+        <option value="Zero">Zero</option>
+        <option value="Positive">Positive</option>
+        <option value="Negative">Negative</option>
+        <!-- Add more options as needed -->
+      </select>
+    </div>
+  
+    <div>
+      <label for="category">Category</label>
+      <select id="category" formControlName="category">
+        <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+      </select>
+    </div>
+  
+    <button type="submit">CREATE KPI</button>
+  </form>
+  

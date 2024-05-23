@@ -1,0 +1,31 @@
+.active {
+    background-color:#0083b3; /* Adjust as needed */
+    color: #fff !important;
+
+    mat-icon{
+        color: #fff!important;
+    }
+}
+   
+.top img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+.custom-button{
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: #000;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1), -4px 4px 6px rgba(0, 0, 0, 1);
+    margin: 10px;
+    
+}
+.all{
+    box-shadow: 4px 4px 6px rgb(94, 94, 94), -4px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+mat-icon{
+    color: #0083b3!important;
+}

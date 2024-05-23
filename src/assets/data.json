@@ -1,0 +1,30 @@
+{
+  "employees": 198,
+  "averageAge": 29,
+  "averageTenure": 4.6,
+  "genderDiversityRatio": 69.93,
+  "employeeRatings": [
+    { "rating": 1, "count": 2 },
+    { "rating": 2, "count": 7 },
+    { "rating": 3, "count": 10 },
+    { "rating": 4, "count": 17 },
+    { "rating": 5, "count": 15 },
+    { "rating": 6, "count": 30 },
+    { "rating": 7, "count": 25 },
+    { "rating": 8, "count": 20 },
+    { "rating": 9, "count": 25 },
+    { "rating": 10, "count": 47 }
+  ],
+  "employeeStatus": [
+    { "status": "Full time", "count": 120, "color": "#ff6384" },
+    { "status": "Part time", "count": 50, "color": "#36a2eb" },
+    { "status": "Sick leave", "count": 15, "color": "#ffce56" },
+    { "status": "Vacation", "count": 13, "color": "#4bc0c0" }
+  ],
+  "employeeScores": [
+    { "name": "Edwin Nkumama", "organization": "E$M Technology", "kpiLabel": "L2 inclusive", "kpiValue": 87, "averageScore": 6, "curriculumProgress": 9 },
+    { "name": "David Wambaire", "organization": "E$M Technology", "kpiLabel": "5L2", "kpiValue": 97, "averageScore": 9, "curriculumProgress": 8 },
+    { "name": "Muchiri David", "organization": "E$M Technology", "kpiLabel": "5L1", "kpiValue": 81, "averageScore": 8, "curriculumProgress": 7 },
+    { "name": "Laureen Skim", "organization": "E$M Technology", "kpiLabel": "5A/A", "kpiValue": 37, "averageScore": 7, "curriculumProgress": 8 }
+  ]
+}

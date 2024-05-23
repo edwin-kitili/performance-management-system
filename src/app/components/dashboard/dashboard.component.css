@@ -1,0 +1,44 @@
+.dashboard {
+  padding: 20px;
+}
+
+.summary-cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  background: #f4f4f4;
+  padding: 15px;
+  text-align: center;
+  flex: 1;
+  margin: 5px;
+  border-radius: 5px;
+  font-size: 1.2em;
+}
+
+.charts {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.chart {
+  flex: 1;
+  margin: 5px;
+}
+
+.employee-scores {
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
