@@ -19,6 +19,8 @@ import { MatCardModule} from '@angular/material/card';
 import { LayoutComponent } from './components/dashboard/layout/layout.component';
 import { SidenavComponent } from './components/dashboard/sidenav/sidenav.component';
 import { NavbarComponent } from './components/dashboard/navbar/navbar.component';
+import {MatToolbarModule} from '@angular/material/toolbar'; 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,11 @@ import { NavbarComponent } from './components/dashboard/navbar/navbar.component'
     MatInputModule,
     MatButtonModule,
     MatCardModule,
+    MatToolbarModule,
+    BrowserAnimationsModule
+    
+    
+
     
     
 

@@ -1,25 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LayoutComponent } from './components/dashboard/layout/layout.component';
-
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { NavbarComponent } from './components/dashboard/navbar/navbar.component';
 const routes: Routes = [
-  // Redirect any undefined routes to the default login
-  {path:'', component:LoginComponent,pathMatch:'full'},
-  // {path:'', redirectTo: 'layout',pathMatch:'full'},
-  // {path:'dashboard', component:DashboardComponent},
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
   {
     path: 'layout',
     component: LayoutComponent,
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-      
-     
-      
-    ],
+      { path: 'dashboard', component: DashboardComponent },
+      { path: 'navbar', component: NavbarComponent } 
+    ]
   },
-  { path: 'dashboard', component: DashboardComponent },
 ];
 
 @NgModule({

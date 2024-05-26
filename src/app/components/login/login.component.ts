@@ -4,16 +4,16 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-goToLayout() {
-throw new Error('Method not implemented.');
-}
+// goToLayout() {
+// throw new Error('Method not implemented.');
+// }
   constructor(private router:Router){
 
   }
-  goToDashboard(){
-    this.router.navigate(['/dashboard'])
+  goToLayout(){
+    this.router.navigate(['/layout'])
   }
 }

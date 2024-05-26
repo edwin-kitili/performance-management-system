@@ -1,142 +1,25 @@
-<div style="height: 100%; width: 200px; background-color: #db8708">
-    <mat-sidenav mode="side" opened>
-      <mat-list>
-        <div>
-          <mat-raised-button
-            toggle
-            mat-list-item
-            routerLink="/layout/dashboard"
-            class="custom-button"
-            style="
-              margin-bottom: 10px;
-              display: flex;
-              height: 80px;
-              align-items: center;
-              color: #fff;
-            "
-          >
-            <mat-icon
-              style="margin-right: 8px; color: #fff"
-              routerLinkActive="active"
-              >menu</mat-icon
-            >
-            <!-- {{ item.title }} -->
-            Dashboard
-            <span routerLink="/layout/dashboard" routerLinkActive="active"></span>
-          </mat-raised-button>
-          <mat-raised-button
-            toggle
-            mat-list-item
-            routerLink="/layout/customers"
-            class="custom-button"
-            style="
-              margin-bottom: 10px;
-              display: flex;
-              height: 80px;
-              align-items: center;
-              color: #fff;
-            "
-          >
-            <mat-icon
-              style="margin-right: 8px; color: #fff"
-              routerLinkActive="active"
-              >people</mat-icon
-            >
-            <!-- {{ item.title }} -->
-            Customers
-            <span routerLink="/layout/customers" routerLinkActive="active"></span>
-          </mat-raised-button>
-          <mat-raised-button
-            toggle
-            mat-list-item
-            routerLink="/layout/products"
-            class="custom-button"
-            style="
-              margin-bottom: 10px;
-              display: flex;
-              height: 80px;
-              align-items: center;
-              color: #fff;
-            "
-          >
-            <mat-icon
-              style="margin-right: 8px; color: #fff"
-              routerLinkActive="active"
-              >devices</mat-icon
-            >
-            Products on loan
-            <span routerLink="/layout/products" routerLinkActive="active"></span>
-          </mat-raised-button>
-          <mat-raised-button
-            toggle
-            mat-list-item
-            routerLink="/layout/payments"
-            class="custom-button"
-            style="
-              margin-bottom: 10px;
-              display: flex;
-              height: 80px;
-              align-items: center;
-              color: #fff;
-            "
-          >
-            <mat-icon
-              style="margin-right: 8px; color: #fff"
-              routerLinkActive="active"
-              >credit_card</mat-icon
-            >
-            <!-- {{ item.title }} -->
-            Payments
-            <span routerLink="/layout/payments" routerLinkActive="active"></span>
-          </mat-raised-button>
-          <mat-raised-button
-            toggle
-            mat-list-item
-            routerLink="/layout/due-payments"
-            class="custom-button"
-            style="
-              margin-bottom: 10px;
-              display: flex;
-              height: 80px;
-              align-items: center;
-              color: #fff;
-            "
-          >
-            <mat-icon
-              style="margin-right: 8px; color: #fff"
-              routerLinkActive="active"
-              >payment</mat-icon
-            >
-            <!-- {{ item.title }} -->
-            Due payments
-            <span
-              routerLink="/layout/due-payments"
-              routerLinkActive="active"
-            ></span>
-          </mat-raised-button>
-          <mat-raised-button
-            toggle
-            mat-list-item
-            routerLink="/layout/settings"
-            class="custom-button"
-            style="
-              margin-bottom: 10px;
-              display: flex;
-              height: 80px;
-              align-items: center;
-              color: #fff;
-            "
-          >
-            <mat-icon
-              style="margin-right: 8px; color: #fff"
-              routerLinkActive="active"
-              >settings</mat-icon
-            >
-            <!-- {{ item.title }} -->
-            Settings
-            <span routerLink="/layout/settings" routerLinkActive="active"></span>
-          </mat-raised-button>
-        </div>
-      </mat-list>
-    </mat-sidenav>
-  </div>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav mode="side" opened>
+    <mat-nav-list>
+      <mat-list-item>
+        <mat-icon matListIcon>home</mat-icon>
+        <span matLine>Home</span>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon matListIcon>security</mat-icon>
+        <span matLine>KPI Library</span>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon matListIcon>flag</mat-icon>
+        <span matLine>Goal Setting</span>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon matListIcon>star</mat-icon>
+        <span matLine>Reporting</span>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

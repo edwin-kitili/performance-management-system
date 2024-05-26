@@ -1,1 +1,22 @@
-<p>navbar works!</p>
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="sidenav.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span class="spacer"></span>
+  <mat-form-field>
+    <mat-label>Search</mat-label>
+    <input matInput type="text" placeholder="enter your search here">
+    <button mat-icon-button matSuffix>
+      <mat-icon>search</mat-icon>
+    </button>
+  </mat-form-field>
+  <button mat-icon-button>
+    <mat-icon>notifications</mat-icon>
+  </button>
+  <button mat-icon-button>
+    <mat-icon>settings</mat-icon>
+  </button>
+  <button mat-icon-button>
+    <img src="https://via.placeholder.com/24" class="profile-pic" alt="Profile">
+  </button>
+</mat-toolbar>
