@@ -1,0 +1,21 @@
+.sidenav-container {
+    height: 100%;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 64px); /* Adjust according to navbar height */
+    overflow: hidden;
+  }
+  
+  mat-sidenav-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  mat-toolbar {
+    z-index: 2;
+  }
+  
