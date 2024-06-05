@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { KpiFormComponent } from './components/kpi-form/kpi-form.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
@@ -20,6 +20,12 @@ import { NavbarComponent } from './components/dashboard/navbar/navbar.component'
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthenticationService } from './authentication.service';
+import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './components/login/login.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -28,7 +34,8 @@ import { AuthenticationService } from './authentication.service';
     DashboardComponent,
     LayoutComponent,
     SidenavComponent,
-    NavbarComponent
+    NavbarComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +51,9 @@ import { AuthenticationService } from './authentication.service';
     MatButtonModule,
     MatCardModule,
     MatToolbarModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CommonModule
+  
   ],
   providers: [
     DashboardService,
